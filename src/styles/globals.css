@@ -4,6 +4,14 @@
 
 @layer base {
   html {
-    @apply box-border font-sans;
+    @apply box-border font-sans text-white bg-dark;
+  }
+
+  a {
+    @apply text-blue;
+  }
+
+  .padding-content {
+    @apply px-[100px];
   }
 }
