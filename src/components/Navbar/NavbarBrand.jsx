@@ -8,7 +8,7 @@ export default function NavbarBrand() {
     <Link href="/">
       <a className={cn('flex items-center justify-center gap-3 text-white')}>
         <div>
-          <div className={cn('relative h-10 aspect-square rounded-full overflow-hidden')}>
+          <div className={cn('relative h-8 aspect-square rounded-full overflow-hidden')}>
             <Image src={logoImage} alt="logo brand" layout="fill" placeholder="blur" />
           </div>
         </div>

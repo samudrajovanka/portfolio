@@ -12,6 +12,6 @@
   }
 
   .padding-content {
-    @apply px-[100px];
+    @apply px-5 md:px-[50px] lg:px-[100px];
   }
 }
