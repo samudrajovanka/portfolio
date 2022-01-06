@@ -12,10 +12,10 @@ function MyApp({ Component, pageProps }) {
           property="og:title"
           content={Component.title ? `${Component.title} | Jovanka Samudra` : 'Jovanka Samudra'}
         />
-        <meta name="description" content={Component.description ?? "Hello, I'm Jovanka Samudra. Welcome..."} />
+        <meta name="description" content={Component.description ?? "Hello, I'm Jovanka Samudra. Welcome...👋"} />
         <meta
           property="og:description"
-          content={Component.description ?? "Hello, I'm Jovanka Samudra. Welcome..."}
+          content={Component.description ?? "Hello, I'm Jovanka Samudra. Welcome...👋"}
           key="ogdesc"
         />
         <meta property="og:type" content="website" />
