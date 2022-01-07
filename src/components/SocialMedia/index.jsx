@@ -36,7 +36,7 @@ export default function SocialMedia() {
         <motion.li
           key={index.toString()}
           className={cn('inline-block', index !== socialMedias.length - 1 ? 'mr-5' : null)}
-          whileHover={{ scale: 1.2, y: [10, -10, 5, -3, 0] }}
+          whileHover={{ scale: 1.2, y: [0, 10, -10, 5, -3, 0] }}
         >
           <Link href={socialMedia.link} passHref>
             <a

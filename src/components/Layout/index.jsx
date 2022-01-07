@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     <div className={cn('min-h-screen flex flex-col')}>
       <Navbar />
 
-      <main className={cn('padding-content flex-1 flex')}>{children}</main>
+      <main className={cn('padding-content flex-1 flex max-w-screen-2xl mx-auto')}>{children}</main>
     </div>
   );
 }
