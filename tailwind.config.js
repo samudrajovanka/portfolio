@@ -4,6 +4,7 @@ module.exports = {
     fontFamily: {
       sans: ['Open Sans', 'sans-serif'],
       fancy: ['Signika Negative', 'cursive'],
+      code: ['Source Code Pro', 'monospace'],
     },
     colors: {
       transparent: 'transparent',

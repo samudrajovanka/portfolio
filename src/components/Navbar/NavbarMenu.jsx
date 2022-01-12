@@ -8,6 +8,21 @@ import NavLinkItem from './NavLinkItem';
 export default function NavbarMenu({ isOpen, onClose }) {
   const [width] = useViewport();
 
+  const pathMenu = [
+    {
+      name: 'Home',
+      path: '/',
+    },
+    {
+      name: 'About',
+      path: '/about',
+    },
+    {
+      name: 'Portfolio',
+      path: '/portfolio',
+    },
+  ];
+
   const isMobile = width < 640;
 
   useEffect(() => {
@@ -31,7 +46,7 @@ export default function NavbarMenu({ isOpen, onClose }) {
   return (
     <motion.div
       className={cn(
-        'fixed sm:relative top-0 right-0 origin-right h-screen sm:h-auto bg-soft-dark sm:bg-transparent flex flex-col items-end'
+        'fixed sm:relative top-0 right-0 origin-right h-screen sm:h-auto padding-content bg-soft-dark sm:bg-transparent flex flex-col items-end'
       )}
       initial="closed"
       animate={isOpen || !isMobile ? 'open' : 'closed'}
@@ -54,11 +69,11 @@ export default function NavbarMenu({ isOpen, onClose }) {
         animate={isOpen || !isMobile ? 'open' : 'closed'}
         variants={variantsMenuList}
       >
-        <NavLinkItem href="/">Home</NavLinkItem>
-        <NavLinkItem href="/about">About</NavLinkItem>
-        <NavLinkItem href="/portfolio">Portfolio</NavLinkItem>
-        <NavLinkItem href="/blogs">Blog</NavLinkItem>
-        <NavLinkItem href="/games">Game</NavLinkItem>
+        {pathMenu.map((item, index) => (
+          <NavLinkItem key={index.toString()} href={item.path} onClose={onClose}>
+            {item.name}
+          </NavLinkItem>
+        ))}
       </motion.ul>
     </motion.div>
   );

@@ -9,7 +9,7 @@ import Triangle from '@components/Icons/Triangle.svg';
 import Square from '@components/Icons/Square.svg';
 import { useEffect, useRef } from 'react';
 
-export default function Home() {
+export default function HomePage() {
   const overlayIconRef = useRef();
 
   useEffect(() => {
@@ -37,18 +37,22 @@ export default function Home() {
     <>
       <div
         className={cn(
-          'grid grid-cols-1 place-items-center content-center lg:grid-cols-12 lg:flex-row-reverse gap-5 lg:gap-10'
+          'padding-content full-height-content grid grid-cols-1 place-items-center content-center lg:grid-cols-12 lg:flex-row-reverse gap-5 lg:gap-10'
         )}
       >
         <div
           className={cn(
-            'relative w-[200px] lg:w-8/12 lg:col-span-5 lg:order-last aspect-square bg-white rounded-full overflow-hidden flex justify-center'
+            'relative w-[200px] lg:w-8/12 aspect-square lg:col-span-5 lg:order-last aspect-square before:w-full before:h-full before:border-4 before:border-blue before:absolute before:top-0 lg:before:-top-5 before:-left-10 lg:before:-left-5 before:rounded-full after:w-full after:h-full after:border-4 after:border-blue after:absolute after:bottom-0 lg:after:-bottom-5 after:-right-10 lg:after:-right-5 after:rounded-full after:-z-[1]'
           )}
         >
-          <Image src={photoMeSquare} layout="fill" alt="Profile picture" objectFit="cover" placeholder="blur" />
+          <div className={cn('relative w-full h-full bg-white rounded-full overflow-hidden flex justify-center')}>
+            <Image src={photoMeSquare} layout="fill" alt="Profile picture" objectFit="cover" placeholder="blur" />
+          </div>
         </div>
 
-        <div className={cn('sm:w-10/12 md:w-full lg:col-span-7 flex flex-col gap-10 text-center lg:text-left')}>
+        <div
+          className={cn('sm:w-10/12 md:w-8/12 lg:w-full lg:col-span-7 flex flex-col gap-10 text-center lg:text-left')}
+        >
           <div>
             <Heading>Hi! I am</Heading>
             <Heading className={cn('text-blue')}>Jovanka Samudra</Heading>
@@ -73,7 +77,7 @@ export default function Home() {
           />
           <Cross
             className={cn(
-              'text-green text-[40px] fixed top-1/3 lg:top-[38%] left-10 lg:left-auto lg:right-[45%] opacity-0 md:opacity-100 transition-opacity duration-300 delay-200'
+              'text-green text-[32px] fixed top-1/3 lg:top-[38%] left-10 lg:left-auto lg:right-[45%] opacity-0 md:opacity-100 transition-opacity duration-300 delay-200'
             )}
             data-speed="3"
           />

@@ -1,0 +1,23 @@
+.text-container {
+  animation: animateColor 10s linear infinite;
+
+  @keyframes animateColor {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  .text {
+    transform: translateX(calc(0% - var(--x) * var(--i)));
+    text-shadow: 20px 10px 0 rgba(255, 255, 255, 0.1);
+
+    .word:nth-child(even) {
+      color: transparent;
+      -webkit-text-stroke: 1px #ffffff;
+    }
+  }
+}

@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 export default function Layout({ children }) {
   return (
-    <div className={cn('min-h-screen flex flex-col')}>
+    <div className={cn('min-h-screen')}>
       <Navbar />
 
-      <main className={cn('padding-content flex-1 flex max-w-screen-2xl mx-auto')}>{children}</main>
+      <main className={cn('max-w-screen-2xl mx-auto')}>{children}</main>
     </div>
   );
 }

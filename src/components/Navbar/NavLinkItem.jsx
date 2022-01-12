@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-export default function NavLinkItem({ href, children }) {
+export default function NavLinkItem({ children, href, onClose }) {
   const router = useRouter();
 
   const isActive = router.pathname === href;
@@ -12,7 +12,7 @@ export default function NavLinkItem({ href, children }) {
   const colorText = isActive ? 'text-blue border border-blue rounded sm:border-none' : 'text-white';
 
   return (
-    <motion.li whileHover={{ scale: 1.1 }}>
+    <motion.li whileHover={{ scale: 1.1 }} onClick={onClose}>
       <Link href={href}>
         <a
           className={cn(
