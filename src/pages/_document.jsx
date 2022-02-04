@@ -11,11 +11,7 @@ class MyDocument extends Document {
       <Html lang="en" translate="no">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap"
             rel="stylesheet"
           />
           <meta name="google" content="notranslate" />

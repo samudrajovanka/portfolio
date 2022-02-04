@@ -19,10 +19,10 @@ function MyApp({ Component, pageProps }) {
           key="ogdesc"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="/images/logo.png" /> {/* fix content image */}
         <meta property="og:site_name" content="Jovanka Samudra" />
-        <meta name="keyword" content="jovanka, samudra" />
         <meta property="og:url" content="https://jovanka-samudra.me" />
+        <meta name="keyword" content="jovanka, samudra" />
       </Head>
       <Layout>
         <Component {...pageProps} />
