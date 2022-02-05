@@ -8,7 +8,7 @@ const textsTyping = ['Web Development', 'UI/UX Design', 'Backend Development'];
 
 export default function Hero({ socialMedia }) {
   return (
-    <section className="container height-screen hero" id="hero-section">
+    <section className="container height-screen center-flex" id="hero-section">
       <h1 className="font-medium text-center">
         Hi! I am <br />
         <span className="font-bold text-c-blue">Jovanka </span>
