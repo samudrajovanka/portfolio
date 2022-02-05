@@ -3,7 +3,7 @@ import { default as NextLink } from 'next/link';
 import PropTypes from 'prop-types';
 
 export default function Link({ children, href, isExternal, target, label, className }) {
-  const rel = isExternal ? 'noopener norefferer' : '';
+  const rel = isExternal ? 'noopener norefferer' : null;
 
   return (
     <NextLink href={href}>

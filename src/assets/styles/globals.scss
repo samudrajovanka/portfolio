@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'layout';
-@import 'navbar';
-@import 'brand-icon';
-@import 'darkmode-button';
+@import 'components/style';
 
 @layer base {
   html {
@@ -13,62 +10,111 @@
   }
 
   body {
-    @apply dark:bg-[#1d1d1d] bg-white transition-colors duration-300 ease-in-out;
+    @apply dark:bg-[#02020c] bg-white transition-colors duration-300 ease-in-out text-black dark:text-white;
   }
 
   button {
-    @apply min-h-[44px] min-w-[44px] focus:ring focus:ring-gray-300 dark:focus:ring-gray-600 rounded-md;
+    @apply min-h-[44px] min-w-[44px] rounded-md;
   }
 }
 
 @layer utilities {
   .small-text {
-    @apply text-sm;
+    @apply text-xs md:text-sm;
+    line-height: 1.4;
   }
 
   p,
   .normal-text {
-    @apply text-base;
+    @apply text-sm md:text-base;
     line-height: 1.4;
   }
 
   h1,
   .heading-1 {
-    @apply text-5xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
     line-height: 1.4;
   }
 
   h2,
   .heading-2 {
-    @apply text-4xl;
+    @apply text-2xl md:text-3xl lg:text-4xl;
     line-height: 1.4;
   }
 
   h3,
   .heading-3 {
-    @apply text-3xl;
+    @apply text-xl md:text-2xl lg:text-3xl;
     line-height: 1.4;
   }
 
   h4,
   .heading-4 {
-    @apply text-2xl;
+    @apply text-lg md:text-xl lg:text-2xl;
     line-height: 1.4;
   }
 
   h5,
   .heading-5 {
-    @apply text-xl;
+    @apply text-base md:text-lg lg:text-xl;
     line-height: 1.4;
   }
 
   h6,
   .heading-6 {
-    @apply text-lg;
+    @apply text-xs md:text-base lg:text-lg;
     line-height: 1.4;
   }
 
   .container {
     @apply max-w-screen-xl mx-auto px-4 sm:px-10 md:px-20 lg:px-28;
+  }
+
+  .height-screen {
+    height: calc(100vh - 69px);
+
+    @media screen and (min-height: 700px) {
+      height: 580px;
+    }
+  }
+}
+
+.hero {
+  @apply flex flex-col justify-center items-center relative;
+}
+
+.social-media {
+  @apply flex gap-4;
+
+  &__item {
+    @apply bg-c-light-gray bg-c-light-gray dark:bg-c-soft-black p-[10px] rounded-md transition-transform ease-in-out duration-300 hover:scale-150;
+
+    &:hover {
+      .icon {
+        @apply transition-colors ease-in-out duration-300;
+      }
+
+      #icon {
+        &-github {
+          @apply text-black dark:text-white;
+        }
+
+        &-linkedin {
+          @apply text-[#0077B7];
+        }
+
+        &-dribbble {
+          @apply text-[#EA4C89];
+        }
+
+        &-youtube {
+          @apply text-[#FF0000];
+        }
+
+        &-email {
+          @apply text-[#F44336];
+        }
+      }
+    }
   }
 }

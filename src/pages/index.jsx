@@ -1,7 +1,7 @@
+import Hero from '@components/parts/Hero';
+
+import socialMedia from '../json/social-media.json';
+
 export default function Home() {
-  return (
-    <div>
-      <p>Welcome 👋</p>
-    </div>
-  );
+  return <Hero socialMedia={socialMedia} />;
 }

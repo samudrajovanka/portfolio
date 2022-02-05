@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://github.com/samudrajovanka",
+    "icon": "github",
+    "label": "Github Profile"
+  },
+  {
+    "url": "https://www.linkedin.com/in/jovanka-samudra/",
+    "icon": "linkedin",
+    "label": "LinkedIn Profile"
+  },
+  {
+    "url": "https://dribbble.com/samudrajovanka",
+    "icon": "dribbble",
+    "label": "Dribbble Profile"
+  },
+  {
+    "url": "mailto:jovankasamudra20@gmail.com",
+    "icon": "email",
+    "label": "Email Account"
+  },
+  {
+    "url": "https://www.youtube.com/channel/UCFMhuDBjoV26MkjYKtwourg",
+    "icon": "youtube",
+    "label": "Youtube Profile"
+  }
+]

@@ -16,8 +16,8 @@ export default function DarkModeButton() {
 
   return (
     <button type="button" id="darkmode-button" aria-label="darkmode button" onClick={changeTheme}>
-      <MoonIcon className="icon heading-6" id="icon-moon" />
-      <SunIcon className="icon heading-6" id="icon-sun" />
+      <MoonIcon className="icon" id="icon-moon" />
+      <SunIcon className="icon" id="icon-sun" />
     </button>
   );
 }

@@ -23,6 +23,7 @@ module.exports = {
           blue: '#234CAD',
           yellow: '#FFBF00',
           'light-gray': '#EEEEEE',
+          'soft-black': '#09091f',
         },
       },
     },

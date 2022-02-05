@@ -2,7 +2,7 @@
   @apply relative flex justify-center items-center overflow-hidden;
 
   .icon {
-    @apply absolute transition-transform ease-in-out duration-300;
+    @apply absolute transition-transform ease-in-out duration-300 text-xl;
 
     &#icon-moon {
       @apply translate-y-0 dark:-translate-y-10;

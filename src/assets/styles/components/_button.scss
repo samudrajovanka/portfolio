@@ -1,0 +1,16 @@
+.btn {
+  @apply px-6 py-3 md:px-9 md:py-4 transition-shadow transition-colors;
+
+  &--primary {
+    @apply bg-c-blue hover:bg-blue-800 text-white font-medium;
+  }
+
+  &--animated {
+    @apply active:translate-y-1;
+  }
+
+  &--shadow {
+    box-shadow: 0px 5px 15px rgba(88, 88, 88, 0.4);
+    @apply dark:shadow-none;
+  }
+}
