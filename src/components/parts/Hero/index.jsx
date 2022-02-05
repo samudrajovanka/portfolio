@@ -15,7 +15,7 @@ export default function Hero({ socialMedia }) {
         <span className="font-bold text-c-yellow">Samudra</span>
       </h1>
       <p className="heading-3 text-center mt-5">
-        I am an undergraduate Informatics student <br className="hidden sm:block" />
+        I am an undergraduate Informatics student <br />
         who is interested <br className="block sm:hidden" />
         in <TextTyping texts={textsTyping} className="text-c-blue dark:text-c-yellow" />
       </p>
