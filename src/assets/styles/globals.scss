@@ -84,6 +84,10 @@
 
   .min-height-screen {
     min-height: calc(100vh - 69px);
+
+    @media screen and (min-height: 700px) {
+      min-height: 580px;
+    }
   }
 
   .img-wrapper {
