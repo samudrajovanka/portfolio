@@ -1,6 +1,7 @@
-import Layout from '@components/Layout';
+import Layout from '@components/parts/Layout';
 import Head from 'next/head';
-import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
+import '@styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -24,9 +25,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://jovanka-samudra.me" />
         <meta name="keyword" content="jovanka, samudra" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider enableSystem={false} attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }

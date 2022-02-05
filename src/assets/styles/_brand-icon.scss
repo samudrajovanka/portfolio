@@ -1,0 +1,15 @@
+.brand-icon {
+  @apply inline-flex items-center gap-3;
+
+  &__image {
+    @apply relative w-7 md:w-9 aspect-square rounded-full overflow-hidden;
+  }
+
+  &__text {
+    @apply text-c-blue dark:text-white;
+
+    span {
+      @apply text-c-yellow;
+    }
+  }
+}

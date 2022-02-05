@@ -1,0 +1,7 @@
+.navbar {
+  @apply border-b border-c-light-gray dark:border-gray-600 py-3 z-40 sticky top-0;
+
+  .nav {
+    @apply flex justify-between items-center;
+  }
+}

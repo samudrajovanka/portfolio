@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'layout';
+@import 'navbar';
+@import 'brand-icon';
+@import 'darkmode-button';
+
+@layer base {
+  html {
+    @apply box-border font-sans;
+  }
+
+  body {
+    @apply dark:bg-[#1d1d1d] bg-white transition-colors duration-300 ease-in-out;
+  }
+
+  button {
+    @apply min-h-[44px] min-w-[44px] focus:ring focus:ring-gray-300 dark:focus:ring-gray-600 rounded-md;
+  }
+}
+
+@layer utilities {
+  .small-text {
+    @apply text-sm;
+  }
+
+  p,
+  .normal-text {
+    @apply text-base;
+    line-height: 1.4;
+  }
+
+  h1,
+  .heading-1 {
+    @apply text-5xl;
+    line-height: 1.4;
+  }
+
+  h2,
+  .heading-2 {
+    @apply text-4xl;
+    line-height: 1.4;
+  }
+
+  h3,
+  .heading-3 {
+    @apply text-3xl;
+    line-height: 1.4;
+  }
+
+  h4,
+  .heading-4 {
+    @apply text-2xl;
+    line-height: 1.4;
+  }
+
+  h5,
+  .heading-5 {
+    @apply text-xl;
+    line-height: 1.4;
+  }
+
+  h6,
+  .heading-6 {
+    @apply text-lg;
+    line-height: 1.4;
+  }
+
+  .container {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-10 md:px-20 lg:px-28;
+  }
+}

@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" translate="no">
+      <Html lang="en">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap"
