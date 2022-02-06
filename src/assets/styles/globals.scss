@@ -12,7 +12,6 @@
 
   body {
     @apply dark:bg-dark bg-white text-black dark:text-white;
-    @include transition('colors');
   }
 
   button {
@@ -20,7 +19,7 @@
   }
 
   a {
-    @apply text-c-blue hover:text-blue-600;
+    @apply text-blue-500 hover:text-blue-600;
   }
 }
 
@@ -109,11 +108,12 @@
   @apply flex gap-4;
 
   &__item {
-    @apply bg-c-light-gray bg-c-light-gray text-black dark:text-white dark:bg-c-soft-black p-[10px] rounded-md transition-transform ease-in-out duration-300 hover:scale-150;
+    @apply bg-c-light-gray bg-c-light-gray text-black dark:text-white dark:bg-c-soft-black p-[10px] rounded-md hover:scale-150;
+    @include transition('transform');
 
     &:hover {
       .icon {
-        @apply transition-colors ease-in-out duration-300;
+        @include transition('colors');
       }
 
       #icon {
@@ -175,7 +175,6 @@
 
 #professional-exp-section {
   @apply bg-c-light-gray dark:bg-c-soft-black mt-10 py-10;
-  @include transition('colors');
 
   .experiences {
     @apply mt-5 grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5 items-start;

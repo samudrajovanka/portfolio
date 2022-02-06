@@ -1,7 +1,11 @@
 @mixin transition($type: 'all') {
-  @if ($type == 'colors') {
+  @if $type == 'colors' {
     @apply transition-colors duration-300 ease-in-out;
-  } @else {
+  } @else if $type == 'transform' {
+    @apply transition-transform duration-300 ease-in-out;
+  } @else if $type == 'all' {
     @apply transition-all duration-300 ease-in-out;
+  } @else {
+    @error 'transition() only accepts [colors, all] as a valid transition type.';
   }
 }
