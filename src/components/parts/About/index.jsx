@@ -16,7 +16,7 @@ export default function About() {
         <div className="content">
           <Title as="h2">Hello</Title>
 
-          <div className="mt-5 paragraph">
+          <div className="paragraph">
             <p>
               I&apos;m Jovanka Samudra, my friends call me Jovan. I am an undergraduate student of Informatics at the
               UPN Veteran Jakarta campus.

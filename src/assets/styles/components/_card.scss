@@ -1,0 +1,7 @@
+.card {
+  @apply py-7 px-4 rounded-lg bg-white border border-gray-300 w-full max-w-md relative text-black overflow-hidden;
+
+  &--center {
+    @apply flex flex-col items-center text-center;
+  }
+}

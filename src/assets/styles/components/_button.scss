@@ -1,5 +1,5 @@
 .btn {
-  @apply px-6 py-3 md:px-9 md:py-4 transition-shadow transition-colors;
+  @apply px-6 py-3 transition-shadow transition-colors;
 
   &--primary {
     @apply bg-c-blue hover:bg-blue-800 text-white font-medium;
