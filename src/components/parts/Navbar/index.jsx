@@ -5,7 +5,7 @@ import Link from '@components/elements/Link';
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <div className="container nav">
+      <div className="container navbar__nav">
         <Link href="/">
           <BrandIcon />
         </Link>

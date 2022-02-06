@@ -1,4 +1,4 @@
-import { TypePhase, useTyped } from 'src/lib/hooks/useTyped';
+import { TypePhase, useTyped } from '@lib/hooks/useTyped';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 

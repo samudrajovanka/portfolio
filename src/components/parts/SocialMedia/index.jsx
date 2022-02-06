@@ -24,7 +24,7 @@ export default function SocialMedia({ data, className }) {
   return (
     <div className={cn('social-media', className)}>
       {data.map(({ url, icon, label }) => (
-        <Link href={url} isExternal target="_blank" aria-label={label} className="social-media__item" key={label}>
+        <Link href={url} isExternal aria-label={label} className="social-media__item" key={label}>
           <Logo Icon={icons[icon]} id={`icon-${icon}`} />
         </Link>
       ))}

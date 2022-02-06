@@ -1,8 +1,8 @@
 .btn {
-  @apply px-6 py-3 transition-shadow transition-colors;
+  @apply px-6 py-3 transition-shadow transition-colors table rounded-md;
 
   &--primary {
-    @apply bg-c-blue hover:bg-blue-800 text-white font-medium;
+    @apply bg-c-blue hover:bg-blue-800 text-white hover:text-white font-medium;
   }
 
   &--animated {

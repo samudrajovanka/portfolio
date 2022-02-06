@@ -6,7 +6,7 @@
       "@public/*": ["public/*"],
       "@styles/*": ["src/assets/styles/*"],
       "@icons/*": ["src/assets/icons/*"],
-      "@libs/*": ["src/libs/*"]
+      "@lib/*": ["src/lib/*"]
     }
   },
   "exclude": ["node_modules", ".next"]

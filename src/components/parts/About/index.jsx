@@ -30,7 +30,7 @@ export default function About() {
             <br />
             <p>
               If you want to know more about me just say &quot;Hi!&quot;{' '}
-              <Link href="mailto:jovankasamudra20@gmail.com" isExternal target="_blank">
+              <Link href="mailto:jovankasamudra20@gmail.com" isExternal>
                 here
               </Link>
               .

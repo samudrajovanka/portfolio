@@ -7,7 +7,7 @@ export default function Link({ children, href, isExternal, target, label, classN
 
   return (
     <NextLink href={href}>
-      <a target={target} rel={rel} className={className} aria-label={label}>
+      <a target={target ?? (isExternal ? '_blank' : '_self')} rel={rel} className={className} aria-label={label}>
         {children}
       </a>
     </NextLink>
@@ -16,7 +16,7 @@ export default function Link({ children, href, isExternal, target, label, classN
 
 Link.defaultProps = {
   isExternal: false,
-  target: '_self',
+  target: null,
   label: null,
   className: null,
 };
