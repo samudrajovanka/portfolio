@@ -6,7 +6,14 @@ import PropTypes from 'prop-types';
 
 const textsTyping = ['Web Development', 'UI/UX Design', 'Backend Development'];
 
-export default function Hero({ socialMedia }) {
+export default function Hero({ socialMedia, refProfessionalExperience }) {
+  const flyToPortfolio = () => {
+    window.scrollTo({
+      top: refProfessionalExperience.current.offsetTop - 60,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section className="container height-screen center-flex" id="hero-section">
       <h1 className="font-medium text-center">
@@ -19,7 +26,7 @@ export default function Hero({ socialMedia }) {
         who is interested <br className="block sm:hidden" />
         in <TextTyping texts={textsTyping} className="text-c-blue dark:text-c-yellow" />
       </p>
-      <Button isAnimated isShadow className="mt-10">
+      <Button isAnimated isShadow className="mt-10" onClick={flyToPortfolio}>
         Show Portfolio
       </Button>
       <SocialMedia data={socialMedia} className="mt-20" />
@@ -32,4 +39,5 @@ export default function Hero({ socialMedia }) {
 
 Hero.propTypes = {
   socialMedia: PropTypes.arrayOf(PropTypes.object).isRequired,
+  refProfessionalExperience: PropTypes.object.isRequired,
 };

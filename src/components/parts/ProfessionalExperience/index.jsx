@@ -3,9 +3,9 @@ import Title from '@components/elements/Title';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-export default function ProfessionalExperience({ data }) {
+export default function ProfessionalExperience({ data, refProfessionalExperience }) {
   return (
-    <section id="professional-exp-section">
+    <section id="professional-exp-section" ref={refProfessionalExperience}>
       <div className="container">
         <Title as="h2" className="mx-auto">
           Professional Experience
@@ -40,4 +40,5 @@ ProfessionalExperience.propTypes = {
       stacks: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ).isRequired,
+  refProfessionalExperience: PropTypes.object.isRequired,
 };
