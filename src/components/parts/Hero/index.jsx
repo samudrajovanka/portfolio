@@ -15,7 +15,7 @@ export default function Hero({ socialMedia, refProfessionalExperience }) {
   };
 
   return (
-    <section className="container height-screen center-flex" id="hero-section">
+    <section className="container height-screen center-flex" id="hero-section" data-aos="fade-down">
       <h1 className="font-medium text-center">
         Hi! I am <br />
         <span className="font-bold text-c-blue">Jovanka </span>

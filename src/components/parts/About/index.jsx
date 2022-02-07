@@ -8,12 +8,12 @@ export default function About() {
   return (
     <section className="container min-height-screen center-flex">
       <div id="about-section">
-        <div className="image">
+        <div className="image" data-aos="fade-up">
           <div className="img-wrapper img-profile">
             <Image src={profileImg} alt="Profile picture" layout="fill" placeholder="blur" />
           </div>
         </div>
-        <div className="content">
+        <div className="content" data-aos="fade-up">
           <Title as="h2">Hello</Title>
 
           <div className="paragraph">

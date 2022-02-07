@@ -6,7 +6,7 @@ import cn from 'classnames';
 export default function ProfessionalExperience({ data, refProfessionalExperience }) {
   return (
     <section id="professional-exp-section" ref={refProfessionalExperience}>
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <Title as="h2" className="mx-auto">
           Professional Experiences
         </Title>

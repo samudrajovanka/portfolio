@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-export default function Title({ children, as, className }) {
+export default function Title({ children, as, className, ...props }) {
   if (as === 'h2') {
     return (
-      <h2 className={cn('title', className)}>
+      <h2 className={cn('title', className)} {...props}>
         {children}
         <span className="text-c-yellow">.</span>
       </h2>

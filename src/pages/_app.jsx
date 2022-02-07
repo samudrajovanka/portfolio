@@ -1,9 +1,20 @@
 import Layout from '@components/parts/Layout';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
+import AOS from 'aos';
+import { useEffect } from 'react';
 import '@styles/globals.scss';
+import 'aos/dist/aos.css';
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      offset: 10,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <Head>

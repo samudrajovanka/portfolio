@@ -2,16 +2,18 @@ import Badge from '@components/elements/Badge';
 import Link from '@components/elements/Link';
 import PropTypes from 'prop-types';
 
-export default function CardProject({ name, url, stacks }) {
+export default function CardProject({ name, url, stacks, ...props }) {
   return (
-    <Link href={url} isExternal className="card card--center card-project">
+    <Link href={url} isExternal className="card card--center card-project" {...props}>
       <h4>{name}</h4>
 
-      <div className="card-project__stacks">
+      <ul className="card-project__stacks">
         {stacks.map((stack, index) => (
-          <Badge key={index.toString()}>{stack}</Badge>
+          <li key={index.toString()}>
+            <Badge>{stack}</Badge>
+          </li>
         ))}
-      </div>
+      </ul>
     </Link>
   );
 }

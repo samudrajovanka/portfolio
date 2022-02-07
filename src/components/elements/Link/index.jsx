@@ -2,12 +2,18 @@
 import { default as NextLink } from 'next/link';
 import PropTypes from 'prop-types';
 
-export default function Link({ children, href, isExternal, target, label, className }) {
+export default function Link({ children, href, isExternal, target, label, className, ...props }) {
   const rel = isExternal ? 'noopener norefferer' : null;
 
   return (
     <NextLink href={href}>
-      <a target={target ?? (isExternal ? '_blank' : '_self')} rel={rel} className={className} aria-label={label}>
+      <a
+        target={target ?? (isExternal ? '_blank' : '_self')}
+        rel={rel}
+        className={className}
+        aria-label={label}
+        {...props}
+      >
         {children}
       </a>
     </NextLink>

@@ -11,11 +11,13 @@ export default function CardExperience({ company, position, type, notShowType, d
         {!notShowType && <span className="font-light"> - {type}</span>}
       </p>
 
-      <div className="card-experience__stacks">
+      <ul className="card-experience__stacks">
         {stacks.map((stack, index) => (
-          <Badge key={index.toString()}>{stack}</Badge>
+          <li key={index.toString()}>
+            <Badge>{stack}</Badge>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="card-experience__duration">
         <p className="small-text text-c-blue">{duration}</p>
