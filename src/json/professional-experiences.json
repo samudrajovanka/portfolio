@@ -1,0 +1,10 @@
+[
+  {
+    "id": "1",
+    "company": "Ayo Pulih",
+    "duration": "2M",
+    "position": "Backend Developer",
+    "type": "Freelancer",
+    "stacks": ["Node JS", "Express JS", "MongoDB"]
+  }
+]
