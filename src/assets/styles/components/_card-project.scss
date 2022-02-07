@@ -1,0 +1,13 @@
+.card-project {
+  @apply border-none min-w-full;
+  @include shadow();
+
+  &::after {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-c-blue dark:bg-indigo-600;
+  }
+
+  &__stacks {
+    @apply flex flex-wrap justify-center gap-2 mt-5;
+  }
+}

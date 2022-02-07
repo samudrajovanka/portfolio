@@ -1,0 +1,12 @@
+.card-experience {
+  @apply bg-c-blue text-white border-none max-w-full;
+  @include shadow();
+
+  &__stacks {
+    @apply flex flex-wrap justify-center gap-2 mt-2;
+  }
+
+  &__duration {
+    @apply absolute top-0 left-0 rounded-br-lg py-1 px-3 bg-white text-black;
+  }
+}

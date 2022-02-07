@@ -4,7 +4,10 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@public/*": ["public/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/assets/styles/*"],
+      "@icons/*": ["src/assets/icons/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@lib/*": ["src/lib/*"]
     }
   },
   "exclude": ["node_modules", ".next"]

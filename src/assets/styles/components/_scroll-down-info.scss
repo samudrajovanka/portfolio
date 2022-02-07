@@ -1,0 +1,32 @@
+.scroll-down-info {
+  @apply absolute bottom-16 md:bottom-20 flex gap-2 items-center;
+  animation: bounce 1s infinite;
+
+  &--left {
+    @apply -left-10;
+
+    .icon {
+      @apply rotate-90;
+    }
+  }
+
+  &--right {
+    @apply -right-10 flex-row-reverse;
+
+    .icon {
+      @apply -rotate-90;
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-40%) rotate(var(--deg));
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0) rotate(var(--deg));
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
