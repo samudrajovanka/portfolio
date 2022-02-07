@@ -3,6 +3,11 @@ const path = require('path');
 // eslint-disable-next-line arrow-body-style
 module.exports = () => {
   return {
+    env: {
+      HOST: process.env.NEXT_PUBLIC_VERCEL_URL
+        ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+        : 'http://localhost:3000',
+    },
     sassOptions: {
       includePaths: [path.join(__dirname, 'assets/styles')],
     },

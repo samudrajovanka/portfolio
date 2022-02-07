@@ -11,7 +11,7 @@ import socialMedia from '../json/social-media.json';
 import professionalExperiences from '../json/professional-experiences.json';
 import projects from '../json/projects.json';
 
-export default function Home({ dribbbleShots }) {
+export default function HomePage({ dribbbleShots }) {
   const refProfessionalExperience = useRef(null);
 
   return (

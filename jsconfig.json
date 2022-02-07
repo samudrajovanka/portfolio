@@ -6,6 +6,7 @@
       "@public/*": ["public/*"],
       "@styles/*": ["src/assets/styles/*"],
       "@icons/*": ["src/assets/icons/*"],
+      "@images/*": ["src/assets/images/*"],
       "@lib/*": ["src/lib/*"]
     }
   },

@@ -104,6 +104,14 @@
   }
 }
 
+.error {
+  @apply absolute h-full w-full gap-5;
+
+  &__image {
+    @apply w-8/12 md:w-3/12;
+  }
+}
+
 #hero-section {
   @apply relative;
 }
