@@ -186,5 +186,10 @@
 }
 
 #projects-section {
-  @apply py-10 bg-c-light-gray dark:bg-c-soft-black;
+  @apply py-10 relative;
+
+  &::before {
+    content: '';
+    @apply block bg-c-light-gray dark:bg-c-soft-black h-5/6 absolute top-0 left-0 right-0 -z-10;
+  }
 }

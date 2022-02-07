@@ -4,6 +4,7 @@ import ProfessionalExperience from '@components/parts/ProfessionalExperiences';
 import DesignPortfolio from '@components/parts/DesignPortfolio';
 import Projects from '@components/parts/Projects';
 import { useRef } from 'react';
+import ConnectWithMe from '@components/parts/ConnectWithMe';
 import axios from 'axios';
 
 import socialMedia from '../json/social-media.json';
@@ -20,6 +21,7 @@ export default function Home({ dribbbleShots }) {
       <ProfessionalExperience data={professionalExperiences} refProfessionalExperience={refProfessionalExperience} />
       <DesignPortfolio data={dribbbleShots} />
       <Projects data={projects} />
+      <ConnectWithMe data={socialMedia} />
     </>
   );
 }
