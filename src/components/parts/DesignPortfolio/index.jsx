@@ -4,12 +4,12 @@ import Title from '@components/elements/Title';
 
 export default function DesignPortfolio({ data }) {
   return (
-    <section className="container py-10" id="design-portfolio">
+    <section className="container py-10" id="design-portfolio-section">
       <Title as="h2" className="mx-auto">
         Design Portfolio
       </Title>
 
-      <div className="mt-5 shots">
+      <div className="mt-5 grid-column-3">
         {data.map((item) => (
           <CardDesign url={item.html_url} title={item.title} imgUrl={item.images.hidpi} key={item.id} />
         ))}

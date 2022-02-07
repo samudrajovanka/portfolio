@@ -23,9 +23,9 @@ function Logo({ Icon, id }) {
 export default function SocialMedia({ data, className }) {
   return (
     <div className={cn('social-media', className)}>
-      {data.map(({ url, icon, label }) => (
-        <Link href={url} isExternal aria-label={label} className="social-media__item" key={label}>
-          <Logo Icon={icons[icon]} id={`icon-${icon}`} />
+      {data.map((item) => (
+        <Link href={item.url} isExternal label={item.label} className="social-media__item" key={item.id}>
+          <Logo Icon={icons[item.icon]} id={`icon-${item.icon}`} />
         </Link>
       ))}
     </div>

@@ -1,25 +1,30 @@
 [
   {
+    "id": "1",
     "url": "https://github.com/samudrajovanka",
     "icon": "github",
     "label": "Github Profile"
   },
   {
+    "id": "2",
     "url": "https://www.linkedin.com/in/jovanka-samudra/",
     "icon": "linkedin",
     "label": "LinkedIn Profile"
   },
   {
+    "id": "3",
     "url": "https://dribbble.com/samudrajovanka",
     "icon": "dribbble",
     "label": "Dribbble Profile"
   },
   {
+    "id": "4",
     "url": "mailto:jovankasamudra20@gmail.com",
     "icon": "email",
     "label": "Email Account"
   },
   {
+    "id": "5",
     "url": "https://www.youtube.com/channel/UCFMhuDBjoV26MkjYKtwourg",
     "icon": "youtube",
     "label": "Youtube Profile"

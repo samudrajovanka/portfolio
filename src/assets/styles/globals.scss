@@ -98,6 +98,10 @@
   .center-flex {
     @apply flex flex-col justify-center items-center;
   }
+
+  .grid-column-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;
+  }
 }
 
 #hero-section {
@@ -108,7 +112,7 @@
   @apply flex gap-4;
 
   &__item {
-    @apply bg-c-light-gray bg-c-light-gray text-black dark:text-white dark:bg-c-soft-black p-[10px] rounded-md hover:scale-150;
+    @apply bg-c-light-gray text-black dark:text-white dark:bg-c-soft-black p-[10px] rounded-md hover:scale-150;
     @include transition('transform');
 
     &:hover {
@@ -177,12 +181,10 @@
   @apply bg-c-light-gray dark:bg-c-soft-black mt-10 py-10;
 
   .experiences {
-    @apply mt-5 grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5 items-start;
+    @apply mt-5 grid sm:grid-cols-2 md:grid-cols-2 gap-5 items-start;
   }
 }
 
-#design-portfolio {
-  .shots {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5;
-  }
+#projects-section {
+  @apply py-10 bg-c-light-gray dark:bg-c-soft-black;
 }

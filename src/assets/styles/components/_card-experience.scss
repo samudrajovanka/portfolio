@@ -1,5 +1,6 @@
 .card-experience {
   @apply bg-c-blue text-white border-none max-w-full;
+  @include shadow();
 
   &__stacks {
     @apply flex flex-wrap justify-center gap-2 mt-2;

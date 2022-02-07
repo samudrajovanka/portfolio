@@ -8,7 +8,7 @@ export default function ProfessionalExperience({ data, refProfessionalExperience
     <section id="professional-exp-section" ref={refProfessionalExperience}>
       <div className="container">
         <Title as="h2" className="mx-auto">
-          Professional Experience
+          Professional Experiences
         </Title>
 
         <div className={cn('container mt-5 relative experiences', { 'sm:pb-5 md:pb-0 lg:pb-5': data.length > 1 })}>
@@ -19,7 +19,7 @@ export default function ProfessionalExperience({ data, refProfessionalExperience
               type={item.type}
               duration={item.duration}
               stacks={item.stacks}
-              key={index.toString()}
+              key={item.id}
               notShowType={item.type === 'Full Time'}
               className={cn({ 'sm:translate-y-5 md:translate-y-0 lg:translate-y-5': index % 2 === 1 })}
             />
