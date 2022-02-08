@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     AOS.init({
       once: true,
-      offset: 10,
+      offset: 5,
       duration: 1000,
     });
   }, []);

@@ -193,8 +193,12 @@
   }
 }
 
+#design-portfolio-section {
+  @apply py-10 mt-10;
+}
+
 #projects-section {
-  @apply py-10 relative;
+  @apply py-10 mt-10 relative;
 
   &::before {
     content: '';
