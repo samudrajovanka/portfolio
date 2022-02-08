@@ -9,7 +9,7 @@ const textsTyping = ['Web Development', 'UI/UX Design', 'Backend Development'];
 export default function Hero({ socialMedia, refProfessionalExperience }) {
   const flyToPortfolio = () => {
     window.scrollTo({
-      top: refProfessionalExperience.current.offsetTop - 60,
+      top: refProfessionalExperience.current.offsetTop,
       behavior: 'smooth',
     });
   };
@@ -27,7 +27,7 @@ export default function Hero({ socialMedia, refProfessionalExperience }) {
         in <TextTyping texts={textsTyping} className="text-c-blue dark:text-c-yellow" />
       </p>
       <Button isAnimated isShadow className="mt-10" onClick={flyToPortfolio}>
-        Show Portfolio
+        Fly to Portfolio
       </Button>
       <SocialMedia data={socialMedia} className="mt-20" />
 
