@@ -19,7 +19,7 @@ export default function About() {
           <div className="paragraph">
             <p>
               I&apos;m Jovanka Samudra, my friends call me Jovan. I am an undergraduate student of Informatics at the
-              UPN Veteran Jakarta campus.
+              UPN Veteran Jakarta University.
             </p>
             <br />
             <p>
