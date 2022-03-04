@@ -40,9 +40,6 @@ export async function getServerSideProps() {
 
   const email = response[1].data.socialMedias.filter((item) => item.icon === 'email')[0];
 
-  // eslint-disable-next-line no-console
-  console.log(response);
-
   return {
     props: {
       dribbbleShots: dribbbleShotsData,
