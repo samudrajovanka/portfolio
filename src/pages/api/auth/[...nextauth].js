@@ -13,9 +13,6 @@ export default NextAuth({
     maxAge: 24 * 60 * 60, // 24 hours
     updateAge: 3 * 60 * 60, // 3 hours
   },
-  jwt: {
-    secret: process.env.SECRET_KEY_LOGIN,
-  },
   providers: [
     CredentialsProvider({
       async authorize(credentials) {
