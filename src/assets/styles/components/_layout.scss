@@ -1,6 +1,10 @@
 .layout {
   @apply flex flex-col min-h-screen;
 
+  &.include-sidebar {
+    @apply md:ml-[250px];
+  }
+
   main {
     @apply flex-1 relative;
   }

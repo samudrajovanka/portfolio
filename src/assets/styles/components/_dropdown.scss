@@ -1,0 +1,33 @@
+.dropdown-menu {
+  @apply relative cursor-pointer;
+
+  &__label {
+    @apply flex items-center gap-1;
+
+    &-icon {
+      @apply rotate-0;
+      @include transition('transform');
+
+      &--open {
+        @apply rotate-180;
+      }
+    }
+  }
+
+  &__menu {
+    @apply absolute right-0 bg-white border dark:bg-black border-c-light-gray dark:border-c-soft-black rounded w-[200px] hidden z-20;
+    @include shadow();
+
+    &--open {
+      @apply block;
+    }
+
+    .menu-item {
+      @apply w-full text-left px-2 py-1 rounded-none;
+
+      &:hover {
+        @apply bg-c-light-gray dark:bg-c-soft-black;
+      }
+    }
+  }
+}

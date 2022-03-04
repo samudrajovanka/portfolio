@@ -2,7 +2,11 @@
   @apply border-b bg-white dark:bg-dark border-c-light-gray dark:border-c-soft-black py-3 relative z-40 sticky top-0;
 
   &__nav {
-    @apply flex justify-between items-center;
+    @apply flex justify-between items-center gap-3;
+
+    &--end {
+      @apply justify-end;
+    }
 
     a {
       @apply flex items-center;
