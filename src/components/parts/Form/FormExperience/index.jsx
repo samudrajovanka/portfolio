@@ -140,8 +140,12 @@ export default function FormExperience({ initialData }) {
       const result = await fetchAPI(endPoint, {
         method: isEdit ? 'PUT' : 'POST',
         body: {
-          ...data,
+          company: data.company,
+          startMonth: data.startMonth,
+          endMonth: data.endMonth,
+          position: data.position,
           type: data.type.value,
+          stacks: data.stacks,
         },
       });
 
