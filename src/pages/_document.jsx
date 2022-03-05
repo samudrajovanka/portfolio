@@ -15,7 +15,8 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta name="google" content="notranslate" />
-          <link rel="icon" href="favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

@@ -10,6 +10,11 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import Router from 'next/router';
 import * as ga from '@lib/ga';
+import { SessionProvider } from 'next-auth/react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Modal from '@components/elements/Modal';
+import { ModalContextProvider } from '@contexts/ModalContext';
 
 NProgress.configure({ showSpinner: false });
 
@@ -53,28 +58,18 @@ function MyApp({ Component, pageProps, router }) {
       </Script>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{Component.title ? `${Component.title} | Jovanka Samudra` : 'Jovanka Samudra'}</title>
-        <meta
-          property="og:title"
-          content={Component.title ? `${Component.title} | Jovanka Samudra` : 'Jovanka Samudra'}
-        />
-        <meta name="description" content={Component.description ?? "Hello, I'm Jovanka Samudra. Welcome..."} />
-        <meta
-          property="og:description"
-          content={Component.description ?? "Hello, I'm Jovanka Samudra. Welcome..."}
-          key="ogdesc"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${process.env.HOST}/logo.png`} /> {/* fix content image */}
-        <meta property="og:site_name" content="Jovanka Samudra" />
-        <meta property="og:url" content={process.env.HOST} />
-        <meta name="keyword" content="jovanka, samudra" />
       </Head>
-      <ThemeProvider enableSystem={false} attribute="class">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <SessionProvider session={pageProps.session}>
+        <ThemeProvider enableSystem={false} attribute="class">
+          <ModalContextProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+            <Modal />
+            <ToastContainer />
+          </ModalContextProvider>
+        </ThemeProvider>
+      </SessionProvider>
     </>
   );
 }

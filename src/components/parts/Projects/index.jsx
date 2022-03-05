@@ -16,7 +16,7 @@ export default function Projects({ data }) {
               name={item.name}
               url={item.url}
               stacks={item.stacks}
-              key={item.id}
+              key={item._id}
               data-aos="flip-left"
               data-aos-delay={(index % 3) * 100}
             />

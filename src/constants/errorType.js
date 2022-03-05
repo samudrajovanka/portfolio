@@ -1,0 +1,9 @@
+export const VALIDATION_ERR = 'VALIDATION_ERR';
+export const NOT_FOUND_ERR = 'NOT_FOUND_ERR';
+export const NOT_ALLOWED_ERR = 'NOT_ALLOWED_ERR';
+export const INVARIANT_ERR = 'INVARIANT_ERR';
+export const SERVER_ERR = 'SERVER_ERR';
+export const AUTHENTICATION_ERR = 'AUTHENTICATION_ERR';
+export const CLIENT_ERR = 'CLIENT_ERR';
+export const PERMISSION_ERR = 'PERMISSION_ERR';
+export const EMAIL_EXIST = 'EMAIL_EXIST';

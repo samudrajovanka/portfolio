@@ -1,0 +1,74 @@
+.form {
+  @apply flex flex-col gap-4;
+
+  &__group {
+    @apply flex flex-col gap-1;
+
+    &-input,
+    &-select {
+      @apply px-3 py-2 border border-gray-300 rounded min-w-[300px] w-full bg-white dark:bg-[#404040];
+
+      &--error {
+        @apply border-red-500 text-red-500 placeholder:text-red-500;
+
+        > .input-placeholder {
+          @apply text-red-500;
+        }
+      }
+    }
+
+    &-input {
+      @apply focus:outline-none focus:ring focus:ring-blue-200 focus:border-c-blue;
+
+      &--error {
+        @apply focus:ring-red-200 focus:border-red-500;
+      }
+    }
+
+    &-select-group {
+      @apply relative cursor-pointer z-20;
+    }
+
+    &-select {
+      @apply flex items-center gap-2 relative min-h-[42px];
+
+      &--focus {
+        @apply ring ring-blue-200 border-c-blue;
+      }
+
+      &--error {
+        @apply ring-red-200 border-red-500;
+      }
+
+      .input-placeholder,
+      &-value {
+        @apply flex-1 text-base;
+      }
+
+      &-divider {
+        @apply w-[2px] min-h-[24px] bg-gray-300;
+      }
+
+      > svg {
+        @apply text-gray-400 dark:text-gray-300;
+      }
+
+      &-options {
+        @apply absolute bg-white dark:bg-[#404040] left-0 right-0 py-1 border border-gray-300 rounded-md translate-y-2 max-h-48 overflow-y-auto z-20;
+
+        &-item {
+          @apply p-2 cursor-pointer;
+
+          &--selected,
+          &:hover {
+            @apply bg-blue-200 dark:bg-c-soft-black;
+          }
+        }
+      }
+    }
+
+    &-error {
+      @apply text-red-500;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.tag {
+  @apply py-2 px-4 bg-c-light-gray dark:bg-c-soft-black rounded-md;
+
+  &--no-select {
+    @apply select-none;
+  }
+}

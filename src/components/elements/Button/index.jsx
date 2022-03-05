@@ -13,6 +13,9 @@ export default function Button({
   href,
   className,
   isExternal,
+  isLoading,
+  disabled,
+  isBlock,
 }) {
   const handleClick = () => {
     if (onClick) {
@@ -25,8 +28,13 @@ export default function Button({
       <Link
         href={href}
         isExternal={isExternal}
-        className={cn(`btn btn--${variant}`, { 'btn--animated': isAnimated }, { 'btn--shadow': isShadow }, className)}
+        className={cn(
+          `btn btn--${variant}`,
+          { 'btn--animated': isAnimated, 'btn--shadow': isShadow, 'btn--block': isBlock },
+          className
+        )}
         onClick={handleClick}
+        role="button"
       >
         {children}
       </Link>
@@ -36,10 +44,20 @@ export default function Button({
   return (
     <button
       type={type}
-      className={cn(`btn btn--${variant}`, { 'btn--animated': isAnimated }, { 'btn--shadow': isShadow }, className)}
+      className={cn(
+        `btn btn--${variant}`,
+        {
+          'btn--animated': isAnimated,
+          'btn--shadow': isShadow,
+          'cursor-not-allowed opacity-50': disabled,
+          'cursor-wait': isLoading,
+        },
+        className
+      )}
       onClick={handleClick}
+      disabled={disabled || isLoading}
     >
-      {children}
+      {isLoading ? 'Loading...' : children}
     </button>
   );
 }
@@ -53,16 +71,22 @@ Button.defaultProps = {
   href: null,
   className: '',
   isExternal: false,
+  isLoading: false,
+  disabled: false,
+  isBlock: false,
 };
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   type: PropTypes.string,
-  variant: PropTypes.oneOf(['primary']),
+  variant: PropTypes.oneOf(['primary', 'danger', 'warning']),
   isAnimated: PropTypes.bool,
   onClick: PropTypes.func,
   isShadow: PropTypes.bool,
   className: PropTypes.string,
   href: PropTypes.string,
   isExternal: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  isBlock: PropTypes.bool,
 };
