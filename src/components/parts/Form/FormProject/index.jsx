@@ -92,7 +92,7 @@ export default function FormProject({ initialData }) {
     if (validateForm()) {
       const endPoint = isEdit ? `/api/projects/${initialData._id}` : '/api/projects';
       const result = await fetchAPI(endPoint, {
-        method: 'POST',
+        method: isEdit ? 'PUT' : 'POST',
         body: {
           name: data.name,
           url: data.url,
