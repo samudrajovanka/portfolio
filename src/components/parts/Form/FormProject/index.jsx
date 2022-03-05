@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
+import { isArrayEqual } from '@lib/check';
 
 export default function FormProject({ initialData }) {
   const [data, setData] = useState({
@@ -26,10 +27,7 @@ export default function FormProject({ initialData }) {
   const isEdit = !!initialData;
 
   const isChange = initialData
-    ? data.name === initialData.name &&
-      data.url === initialData.url &&
-      data.stack === initialData.stack &&
-      data.stacks === initialData.stacks
+    ? data.name === initialData?.name && data.url === initialData?.url && isArrayEqual(data.stacks, initialData?.stacks)
     : null;
 
   const handleChangeInput = (e) => {
@@ -154,10 +152,10 @@ export default function FormProject({ initialData }) {
             errorMessage={error.stacks}
             disabled={data.stacks.length === 5}
           />
-          <ul className="flex gap-2 mt-2">
+          <ul className="flex flex-wrap gap-2 mt-2">
             {data.stacks.map((stack, index) => (
               <li key={index.toString()} onDoubleClick={() => handleDeleteStack(index)} className="cursor-pointer">
-                <TagLabel>{stack}</TagLabel>
+                <TagLabel noSelect>{stack}</TagLabel>
               </li>
             ))}
           </ul>

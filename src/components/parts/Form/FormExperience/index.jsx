@@ -3,7 +3,7 @@ import Input from '@components/elements/Input/Input';
 import Select from '@components/elements/Input/Select';
 import TagLabel from '@components/elements/TagLabel';
 import { OPTIONS_EXPERIENCE } from '@constants/data';
-import { isObjEmpty } from '@lib/check';
+import { isArrayEqual, isObjEmpty } from '@lib/check';
 import fetchAPI from '@lib/fetchApi';
 import moment from 'moment';
 import { useRouter } from 'next/router';
@@ -41,7 +41,7 @@ export default function FormExperience({ initialData }) {
       data.endMonth === moment(initialData.endMonth).format('YYYY-MM') &&
       data.position === initialData.position &&
       data.type?.value === initialData.type &&
-      data.stacks === initialData.stacks
+      isArrayEqual(data.stacks, initialData.stacks)
     : null;
 
   const handleChangeInput = (e) => {
@@ -237,10 +237,10 @@ export default function FormExperience({ initialData }) {
             errorMessage={error.stacks}
             disabled={data.stacks.length === 5}
           />
-          <ul className="flex gap-2 mt-2">
+          <ul className="flex flex-wrap gap-2 mt-2">
             {data.stacks.map((stack, index) => (
               <li key={index.toString()} onDoubleClick={() => handleDeleteStack(index)} className="cursor-pointer">
-                <TagLabel>{stack}</TagLabel>
+                <TagLabel noSelect>{stack}</TagLabel>
               </li>
             ))}
           </ul>
