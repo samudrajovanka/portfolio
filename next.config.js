@@ -6,6 +6,10 @@ const getHost = () => {
       case 'production':
         return 'https://jovanka-samudra.me';
       default:
+        if (process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG === 'develop') {
+          return 'https://jovanka-samudra-develop.vercel.app';
+        }
+
         return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
     }
   } else {
