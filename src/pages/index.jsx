@@ -5,37 +5,48 @@ import DesignPortfolio from '@components/parts/DesignPortfolio';
 import Projects from '@components/parts/Projects';
 import { useRef } from 'react';
 import ConnectWithMe from '@components/parts/ConnectWithMe';
-import axios from 'axios';
+import SeoPage from '@components/elements/SeoPage';
+import fetchAPI from '@lib/fetchApi';
 
-import socialMedia from '../json/social-media.json';
-import professionalExperiences from '../json/professional-experiences.json';
-import projects from '../json/projects.json';
-
-export default function HomePage({ dribbbleShots }) {
+export default function HomePage({ dribbbleShots, socialMedias, projects, experiences, email }) {
   const refProfessionalExperience = useRef(null);
 
   return (
     <>
-      <Hero refProfessionalExperience={refProfessionalExperience} socialMedia={socialMedia} />
-      <About />
-      <ProfessionalExperience data={professionalExperiences} refProfessionalExperience={refProfessionalExperience} />
+      <SeoPage />
+      <Hero refProfessionalExperience={refProfessionalExperience} socialMedia={socialMedias} />
+      <About email={email} />
+      <ProfessionalExperience data={experiences} refProfessionalExperience={refProfessionalExperience} />
       <DesignPortfolio data={dribbbleShots} />
       <Projects data={projects} />
-      <ConnectWithMe data={socialMedia} />
+      <ConnectWithMe data={socialMedias} />
     </>
   );
 }
 
 export async function getServerSideProps() {
-  const dribbbleShots = await axios('https://api.dribbble.com/v2/user/shots?per_page=6', {
-    headers: {
-      Authorization: `Bearer ${process.env.DRIBBBLE_ACCESS_TOKEN}`,
-    },
-  });
+  const response = await Promise.all([
+    await fetch('https://api.dribbble.com/v2/user/shots?per_page=6', {
+      headers: {
+        Authorization: `Bearer ${process.env.DRIBBBLE_ACCESS_TOKEN}`,
+      },
+    }),
+    await fetchAPI('/api/social-medias'),
+    await fetchAPI('/api/projects'),
+    await fetchAPI('/api/experiences'),
+  ]);
+
+  const dribbbleShotsData = await response[0].json();
+
+  const email = response[1].data.socialMedias.filter((item) => item.icon === 'email')[0];
 
   return {
     props: {
-      dribbbleShots: dribbbleShots.data,
+      dribbbleShots: dribbbleShotsData,
+      socialMedias: response[1].data.socialMedias,
+      projects: response[2].data.projects,
+      experiences: response[3].data.experiences,
+      email: email?.url ?? 'mailto:samudrajovanka20@gmail.com',
     },
   };
 }

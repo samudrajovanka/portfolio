@@ -1,0 +1,22 @@
+.table-container {
+  @apply overflow-x-auto;
+
+  .table {
+    @apply w-full text-left border-collapse border border-gray-400;
+
+    &__head,
+    &__data {
+      @apply border border-gray-400 p-2;
+    }
+
+    &__head {
+      @apply bg-blue-600 text-white;
+    }
+
+    &__row {
+      &:nth-child(even) {
+        @apply bg-c-light-gray dark:bg-c-soft-black;
+      }
+    }
+  }
+}

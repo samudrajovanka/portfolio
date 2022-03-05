@@ -1,10 +1,11 @@
 import Link from '@components/elements/Link';
 import Title from '@components/elements/Title';
+import PropTypes from 'prop-types';
 
 import profileImg from '@public/images/profile.png';
 import Image from 'next/image';
 
-export default function About() {
+export default function About({ email }) {
   return (
     <section className="container min-height-screen center-flex">
       <div id="about-section">
@@ -30,7 +31,7 @@ export default function About() {
             <br />
             <p>
               If you want to know more about me just say &quot;Hi!&quot;{' '}
-              <Link href="mailto:jovankasamudra20@gmail.com" isExternal>
+              <Link href={email} isExternal>
                 here
               </Link>
               .
@@ -41,3 +42,7 @@ export default function About() {
     </section>
   );
 }
+
+About.propTypes = {
+  email: PropTypes.string.isRequired,
+};
