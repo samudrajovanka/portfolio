@@ -1,6 +1,6 @@
 import About from '@components/parts/About';
 import Hero from '@components/parts/Hero';
-import ProfessionalExperience from '@components/parts/ProfessionalExperiences';
+import Experience from '@components/parts/Experiences';
 import DesignPortfolio from '@components/parts/DesignPortfolio';
 import Projects from '@components/parts/Projects';
 import { useRef } from 'react';
@@ -9,14 +9,14 @@ import SeoPage from '@components/elements/SeoPage';
 import fetchAPI from '@lib/fetchApi';
 
 export default function HomePage({ dribbbleShots, socialMedias, projects, experiences, email }) {
-  const refProfessionalExperience = useRef(null);
+  const refExperience = useRef(null);
 
   return (
     <>
       <SeoPage />
-      <Hero refProfessionalExperience={refProfessionalExperience} socialMedia={socialMedias} />
+      <Hero refExperience={refExperience} socialMedia={socialMedias} />
       <About email={email} />
-      <ProfessionalExperience data={experiences} refProfessionalExperience={refProfessionalExperience} />
+      <Experience data={experiences} refExperience={refExperience} />
       <DesignPortfolio data={dribbbleShots} />
       <Projects data={projects} />
       <ConnectWithMe data={socialMedias} />
