@@ -197,11 +197,11 @@
   }
 }
 
-#professional-exp-section {
+#experience-section {
   @apply bg-c-light-gray dark:bg-c-soft-black mt-10 py-10;
 
   .experiences {
-    @apply mt-5 grid md:grid-cols-2 gap-5 xs:w-10/12 md:w-full items-start md:px-0;
+    @apply mt-5 grid md:grid-cols-2 gap-5 xs:w-10/12 md:w-full items-start md:px-8 lg:px-28;
   }
 }
 

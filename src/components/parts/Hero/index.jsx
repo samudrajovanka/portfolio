@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 
 const textsTyping = ['Web Development', 'UI/UX Design', 'Backend Development'];
 
-export default function Hero({ socialMedia, refProfessionalExperience }) {
+export default function Hero({ socialMedia, refExperience }) {
   const flyToPortfolio = () => {
     window.scrollTo({
-      top: refProfessionalExperience.current.offsetTop,
+      top: refExperience.current.offsetTop,
       behavior: 'smooth',
     });
   };
@@ -39,5 +39,5 @@ export default function Hero({ socialMedia, refProfessionalExperience }) {
 
 Hero.propTypes = {
   socialMedia: PropTypes.arrayOf(PropTypes.object).isRequired,
-  refProfessionalExperience: PropTypes.object.isRequired,
+  refExperience: PropTypes.object.isRequired,
 };
