@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { isArrayEqual } from '@lib/check';
+import uuid from 'react-uuid';
 
 export default function FormProject({ initialData }) {
   const [data, setData] = useState({
@@ -154,7 +155,7 @@ export default function FormProject({ initialData }) {
           />
           <ul className="flex flex-wrap gap-2 mt-2">
             {data.stacks.map((stack, index) => (
-              <li key={index.toString()} onDoubleClick={() => handleDeleteStack(index)} className="cursor-pointer">
+              <li key={uuid()} onDoubleClick={() => handleDeleteStack(index)} className="cursor-pointer">
                 <TagLabel noSelect>{stack}</TagLabel>
               </li>
             ))}
