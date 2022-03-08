@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
@@ -18,6 +19,10 @@ module.exports = {
       yellow: colors.yellow,
       blue: colors.blue,
       red: colors.red,
+    },
+    screens: {
+      xs: '500px',
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {

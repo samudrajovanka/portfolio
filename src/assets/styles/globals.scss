@@ -108,7 +108,7 @@
   }
 
   .grid-column-3 {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;
+    @apply grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-5;
   }
 
   .input-placeholder {
@@ -201,7 +201,7 @@
   @apply bg-c-light-gray dark:bg-c-soft-black mt-10 py-10;
 
   .experiences {
-    @apply mt-5 grid sm:grid-cols-2 md:grid-cols-2 gap-5 items-start;
+    @apply mt-5 grid md:grid-cols-2 gap-5 xs:w-10/12 md:w-full items-start md:px-0;
   }
 }
 
