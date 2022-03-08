@@ -1,6 +1,7 @@
 import Badge from '@components/elements/Badge';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 
 export default function CardExperience({ company, position, type, notShowType, duration, stacks, className }) {
   return (
@@ -12,8 +13,8 @@ export default function CardExperience({ company, position, type, notShowType, d
       </p>
 
       <ul className="card-experience__stacks">
-        {stacks.map((stack, index) => (
-          <li key={index.toString()}>
+        {stacks.map((stack) => (
+          <li key={uuid()}>
             <Badge>{stack}</Badge>
           </li>
         ))}

@@ -3,6 +3,7 @@ import Link from '@components/elements/Link';
 import cn from 'classnames';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import uuid from 'react-uuid';
 
 import TriangleDownIcon from '@icons/ic_triangle_down.svg';
 
@@ -55,11 +56,11 @@ export default function Sidebar() {
         </header>
 
         <div className="sidebar__menu">
-          {menus.map((menu, index) => (
+          {menus.map((menu) => (
             <Link
               href={menu.link}
               className={cn('sidebar__menu-item', { 'sidebar__menu-item--active': isActive(menu.link) })}
-              key={index.toString()}
+              key={uuid()}
               onClick={toggleSidebar}
             >
               {menu.label}

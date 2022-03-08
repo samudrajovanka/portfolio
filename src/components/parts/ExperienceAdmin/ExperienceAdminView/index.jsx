@@ -10,6 +10,7 @@ import { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 
 export default function ExperiencesAdminView({ data }) {
   const [dataExperiences, setDataExperiences] = useState(data);
@@ -60,7 +61,7 @@ export default function ExperiencesAdminView({ data }) {
         <tbody>
           {dataExperiences &&
             dataExperiences.map((item, index) => (
-              <TableRow key={index.toString()}>
+              <TableRow key={uuid()}>
                 <TableData>{index + 1}</TableData>
                 <TableData>{item.company}</TableData>
                 <TableData>

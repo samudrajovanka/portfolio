@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { isObjEmpty } from '@lib/check';
 import useClickOutside from '@lib/hooks/useClickOutside';
 import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 
 import TriangleDownIcon from '@icons/ic_triangle_down.svg';
 
@@ -58,9 +59,9 @@ export default function Select({
         {isOpenOptions && (
           <div className="form__group-select-options">
             {options.length > 0 &&
-              options.map((option, index) => (
+              options.map((option) => (
                 <div
-                  key={index.toString()}
+                  key={uuid()}
                   className={cn('form__group-select-options-item', {
                     'form__group-select-options-item--selected': option.value === valueSelected?.value,
                   })}
