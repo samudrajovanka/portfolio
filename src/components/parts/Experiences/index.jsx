@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import moment from 'moment';
 
-export default function ProfessionalExperience({ data, refProfessionalExperience }) {
+export default function ProfessionalExperience({ data, refExperience }) {
   return (
-    <section id="professional-exp-section" ref={refProfessionalExperience}>
+    <section id="experience-section" ref={refExperience}>
       <div className="container" data-aos="fade-up">
         <Title as="h2" className="mx-auto">
           Experiences
@@ -51,5 +51,5 @@ ProfessionalExperience.propTypes = {
       stacks: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ).isRequired,
-  refProfessionalExperience: PropTypes.object.isRequired,
+  refExperience: PropTypes.object.isRequired,
 };
