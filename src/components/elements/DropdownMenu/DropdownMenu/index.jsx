@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import MenuItem from '@components/elements/DropdownMenu/MenuItem';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 
 import TriangleDownIcon from '@icons/ic_triangle_down.svg';
 import useClickOutside from '@lib/hooks/useClickOutside';
@@ -33,8 +34,8 @@ export default function DropdownMenu({ children, menu }) {
 
       <div className={cn('dropdown-menu__menu', { 'dropdown-menu__menu--open': isOpen })}>
         {menu &&
-          menu.map((item, index) => (
-            <MenuItem onClick={() => onClickMenuItem(item.onClick)} key={index.toString()}>
+          menu.map((item) => (
+            <MenuItem onClick={() => onClickMenuItem(item.onClick)} key={uuid()}>
               {item.label}
             </MenuItem>
           ))}
