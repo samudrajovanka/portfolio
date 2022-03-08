@@ -1,8 +1,23 @@
 .card-design {
   @apply border-none p-0 max-w-full;
 
+  .img-wrapper {
+    @apply scale-110;
+    @include transition('transform');
+  }
+
+  &:hover {
+    .img-wrapper {
+      @apply scale-100;
+    }
+
+    .card-design__title {
+      @apply opacity-100;
+    }
+  }
+
   &__title {
-    @apply absolute top-0 left-0 h-full w-full p-4 text-center backdrop-blur-[10px] bg-c-blue/30 text-white opacity-0 hover:opacity-100;
+    @apply absolute top-0 left-0 h-full w-full p-4 text-center backdrop-blur-[10px] bg-c-blue/30 text-white opacity-0;
     @include transition('opacity');
 
     > h6 {
