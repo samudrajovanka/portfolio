@@ -16,10 +16,10 @@ export default function Hero({ socialMedia, refExperience }) {
 
   return (
     <section className="container height-screen center-flex" id="hero-section" data-aos="fade-down">
-      <h1 className="font-medium text-center">
+      <h1 className="font-handwriting text-center">
         Hi! I am <br />
-        <span className="font-bold text-c-blue">Jovanka </span>
-        <span className="font-bold text-c-yellow">Samudra</span>
+        <span className="text-c-blue">Jovanka </span>
+        <span className="text-c-yellow">Samudra</span>
       </h1>
       <p className="heading-3 text-center mt-5">
         I am an undergraduate Informatics student <br />
