@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
+      handwriting: ['Gochi Hand', 'sans-serif'],
     },
     colors: {
       transparent: 'transparent',
