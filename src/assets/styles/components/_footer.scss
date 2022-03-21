@@ -1,3 +1,7 @@
 .footer {
-  @apply border-t border-c-light-gray dark:border-c-soft-black py-4;
+  @apply border-t border-c-light-gray dark:border-c-soft-black py-4 font-handwriting flex flex-col xs:flex-row xs:gap-1 justify-center items-center;
+
+  > p {
+    @apply text-lg;
+  }
 }
