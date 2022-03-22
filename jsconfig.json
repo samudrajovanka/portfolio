@@ -13,7 +13,8 @@
       "@services/*": ["src/services/*"],
       "@exceptions/*": ["src/exceptions/*"],
       "@constants/*": ["src/constants/*"],
-      "@contexts/*": ["src/contexts/*"]
+      "@contexts/*": ["src/contexts/*"],
+      "@data/*": ["src/data/*"]
     }
   },
   "exclude": ["node_modules", ".next"]

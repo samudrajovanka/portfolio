@@ -3,9 +3,9 @@ import Link from '@components/elements/Link';
 import cn from 'classnames';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import uuid from 'react-uuid';
 
 import TriangleDownIcon from '@icons/ic_triangle_down.svg';
+import uid from '@lib/uid';
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function Sidebar() {
             <Link
               href={menu.link}
               className={cn('sidebar__menu-item', { 'sidebar__menu-item--active': isActive(menu.link) })}
-              key={uuid()}
+              key={uid()}
               onClick={toggleSidebar}
             >
               {menu.label}

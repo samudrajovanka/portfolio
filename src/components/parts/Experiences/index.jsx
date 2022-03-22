@@ -28,7 +28,7 @@ export default function ProfessionalExperience({ data, refExperience }) {
                 type={item.type}
                 duration={fullDuration}
                 stacks={item.stacks}
-                key={item._id}
+                key={item.id}
                 notShowType={item.type === 'Full Time'}
                 className={cn({ 'lg:translate-y-5': index % 2 === 1 })}
               />

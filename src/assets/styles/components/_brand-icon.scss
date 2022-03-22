@@ -6,7 +6,7 @@
   }
 
   &__text {
-    @apply text-c-blue dark:text-white text-2xl;
+    @apply text-c-blue dark:text-white text-2xl font-handwriting;
 
     span {
       @apply text-c-yellow;
