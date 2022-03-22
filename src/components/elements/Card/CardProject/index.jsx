@@ -1,7 +1,7 @@
 import Badge from '@components/elements/Badge';
 import Link from '@components/elements/Link';
+import uid from '@lib/uid';
 import PropTypes from 'prop-types';
-import uuid from 'react-uuid';
 
 export default function CardProject({ name, url, stacks, ...props }) {
   return (
@@ -10,7 +10,7 @@ export default function CardProject({ name, url, stacks, ...props }) {
 
       <ul className="card-project__stacks">
         {stacks.map((stack) => (
-          <li key={uuid()}>
+          <li key={uid()}>
             <Badge>{stack}</Badge>
           </li>
         ))}

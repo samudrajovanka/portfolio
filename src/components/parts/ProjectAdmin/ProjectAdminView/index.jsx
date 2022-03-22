@@ -10,7 +10,7 @@ import fetchAPI from '@lib/fetchApi';
 import { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
-import uuid from 'react-uuid';
+import uid from '@lib/uid';
 
 export default function ProjectAdminView({ data }) {
   const [dataProject, setDataProject] = useState(data);
@@ -59,7 +59,7 @@ export default function ProjectAdminView({ data }) {
         <tbody>
           {dataProject &&
             dataProject.map((item, index) => (
-              <TableRow key={uuid()}>
+              <TableRow key={uid()}>
                 <TableData>{index + 1}</TableData>
                 <TableData>{item.name}</TableData>
                 <TableData>
