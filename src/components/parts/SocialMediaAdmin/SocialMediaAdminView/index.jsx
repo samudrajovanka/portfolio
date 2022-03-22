@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 import { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import ModalContext from '@contexts/ModalContext';
-import uuid from 'react-uuid';
+import uid from '@lib/uid';
 
 export default function SocialMediaAdminView({ data }) {
   const [dataSocialMedia, setDataSocialMedia] = useState(data);
@@ -63,7 +63,7 @@ export default function SocialMediaAdminView({ data }) {
         <tbody>
           {dataSocialMedia &&
             dataSocialMedia.map((item, index) => (
-              <TableRow key={uuid()}>
+              <TableRow key={uid()}>
                 <TableData>{index + 1}</TableData>
                 <TableData>{item.label}</TableData>
                 <TableData>

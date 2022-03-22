@@ -6,47 +6,40 @@ import Projects from '@components/parts/Projects';
 import { useRef } from 'react';
 import ConnectWithMe from '@components/parts/ConnectWithMe';
 import SeoPage from '@components/elements/SeoPage';
-import fetchAPI from '@lib/fetchApi';
 
-export default function HomePage({ dribbbleShots, socialMedias, projects, experiences, email }) {
+import socialMedia from '@data/socialMedia';
+import projects from '@data/projects';
+import experiences from '@data/experiences';
+
+export default function HomePage({ dribbbleShots }) {
   const refExperience = useRef(null);
 
   return (
     <>
       <SeoPage />
-      <Hero refExperience={refExperience} socialMedia={socialMedias} />
-      <About email={email} />
+      <Hero refExperience={refExperience} socialMedia={socialMedia} />
+      <About />
       <Experience data={experiences} refExperience={refExperience} />
       <DesignPortfolio data={dribbbleShots} />
       <Projects data={projects} />
-      <ConnectWithMe data={socialMedias} />
+      <ConnectWithMe data={socialMedia} />
     </>
   );
 }
 
-export async function getServerSideProps() {
-  const response = await Promise.all([
-    await fetch('https://api.dribbble.com/v2/user/shots?per_page=6', {
-      headers: {
-        Authorization: `Bearer ${process.env.DRIBBBLE_ACCESS_TOKEN}`,
-      },
-    }),
-    await fetchAPI('/api/social-medias'),
-    await fetchAPI('/api/projects'),
-    await fetchAPI('/api/experiences'),
-  ]);
+export async function getStaticProps() {
+  const responseDribbble = await fetch('https://api.dribbble.com/v2/user/shots?per_page=6', {
+    headers: {
+      Authorization: `Bearer ${process.env.DRIBBBLE_ACCESS_TOKEN}`,
+    },
+  });
 
-  const dribbbleShotsData = await response[0].json();
-
-  const email = response[1].data.socialMedias.filter((item) => item.icon === 'email')[0];
+  const dribbbleShotsData = await responseDribbble.json();
 
   return {
     props: {
       dribbbleShots: dribbbleShotsData,
-      socialMedias: response[1].data.socialMedias,
-      projects: response[2].data.projects,
-      experiences: response[3].data.experiences,
-      email: email?.url ?? 'mailto:samudrajovanka20@gmail.com',
     },
+    revalidate: 10,
   };
 }

@@ -20,8 +20,7 @@
     @apply absolute top-0 left-0 h-full w-full p-4 text-center backdrop-blur-[10px] bg-c-blue/30 text-white opacity-0;
     @include transition('opacity');
 
-    > h6 {
-      @apply text-sm;
+    h6 {
       text-shadow: 0 0 5px #234cad9a;
     }
   }
