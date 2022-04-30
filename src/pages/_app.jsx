@@ -10,11 +10,6 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import Router from 'next/router';
 import * as ga from '@lib/ga';
-import { SessionProvider } from 'next-auth/react';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Modal from '@components/elements/Modal';
-import { ModalContextProvider } from '@contexts/ModalContext';
 
 NProgress.configure({ showSpinner: false });
 
@@ -59,17 +54,11 @@ function MyApp({ Component, pageProps, router }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <SessionProvider session={pageProps.session}>
-        <ThemeProvider enableSystem={false} attribute="class">
-          <ModalContextProvider>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-            <Modal />
-            <ToastContainer />
-          </ModalContextProvider>
-        </ThemeProvider>
-      </SessionProvider>
+      <ThemeProvider enableSystem={false} attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }
