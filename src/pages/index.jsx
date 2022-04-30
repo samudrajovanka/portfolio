@@ -40,6 +40,6 @@ export async function getStaticProps() {
     props: {
       dribbbleShots: dribbbleShotsData,
     },
-    revalidate: 1,
+    revalidate: 10,
   };
 }
