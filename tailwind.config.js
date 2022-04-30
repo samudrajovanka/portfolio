@@ -31,7 +31,7 @@ module.exports = {
           blue: '#234CAD',
           yellow: '#FFBF00',
           'light-gray': '#EEEEEE',
-          'soft-black': '#07071f',
+          'soft-black': '#181838',
         },
       },
     },
