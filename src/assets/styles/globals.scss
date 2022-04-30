@@ -192,7 +192,7 @@
     @apply col-span-12 md:col-span-5 md:order-last;
 
     .img-profile {
-      @apply w-[200px] h-[225px] sm:w-[300px] sm:h-[325px] lg:w-[460px] lg:h-[485px];
+      @apply w-[200px] sm:w-[300px] lg:w-[460px] aspect-[1/1.07];
     }
   }
 }
