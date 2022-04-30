@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import moment from 'moment';
 
-export default function ProfessionalExperience({ data, refExperience }) {
+export default function Experiences({ data, refExperience }) {
   return (
     <section id="experience-section" ref={refExperience}>
       <div className="container" data-aos="fade-up">
@@ -40,14 +40,14 @@ export default function ProfessionalExperience({ data, refExperience }) {
   );
 }
 
-ProfessionalExperience.propTypes = {
+Experiences.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       company: PropTypes.string.isRequired,
       position: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      startMonth: PropTypes.string.isRequired,
-      endMonth: PropTypes.string.isRequired,
+      startMonth: PropTypes.object.isRequired,
+      endMonth: PropTypes.object.isRequired,
       stacks: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ).isRequired,

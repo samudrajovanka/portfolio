@@ -1,6 +1,6 @@
 import About from '@components/parts/About';
 import Hero from '@components/parts/Hero';
-import Experience from '@components/parts/Experiences';
+import Experiences from '@components/parts/Experiences';
 import DesignPortfolio from '@components/parts/DesignPortfolio';
 import Projects from '@components/parts/Projects';
 import { useRef } from 'react';
@@ -19,7 +19,7 @@ export default function HomePage({ dribbbleShots }) {
       <SeoPage />
       <Hero refExperience={refExperience} socialMedia={socialMedia} />
       <About />
-      <Experience data={experiences} refExperience={refExperience} />
+      <Experiences data={experiences} refExperience={refExperience} />
       <DesignPortfolio data={dribbbleShots} />
       <Projects data={projects} />
       <ConnectWithMe data={socialMedia} />
@@ -40,6 +40,6 @@ export async function getStaticProps() {
     props: {
       dribbbleShots: dribbbleShotsData,
     },
-    revalidate: 10,
+    revalidate: 1,
   };
 }
