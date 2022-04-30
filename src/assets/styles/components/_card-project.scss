@@ -1,15 +1,22 @@
 .card-project {
-  @apply border-none min-w-full;
+  @apply border-none min-w-full hover:text-black;
   @include shadow();
+
+  &::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 scale-100 bg-c-blue;
+    @include transition('transform');
+  }
 
   &::after {
     content: '';
-    @apply absolute top-0 left-0 right-0 h-1 bg-c-blue dark:bg-indigo-600;
+    @apply absolute top-0 left-0 w-full h-1 scale-0 bg-c-yellow;
+    @include transition('transform');
   }
 
   &:hover {
     &::after {
-      @apply bg-blue-500;
+      @apply md:scale-100;
     }
   }
 
