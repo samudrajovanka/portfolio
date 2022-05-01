@@ -1,11 +1,11 @@
-import NavbarHome from '@components/parts/Navbar';
+import Navbar from '@components/parts/Navbar';
 import Footer from '@components/parts/Footer';
 import PropTypes from 'prop-types';
 
 export default function Layout({ children }) {
   return (
     <div className="layout">
-      <NavbarHome />
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </div>
