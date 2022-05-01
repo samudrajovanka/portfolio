@@ -6,7 +6,7 @@ export default function Projects({ data }) {
   return (
     <section id="projects-section">
       <div className="container">
-        <Title as="h2" className="mx-auto" data-aos="fade-up">
+        <Title className="mx-auto" data-aos="fade-up">
           Projects
         </Title>
 

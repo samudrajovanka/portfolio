@@ -16,7 +16,7 @@ export default function CardDesign({ title, url, imgUrl, ...props }) {
         />
       </div>
       <div className="card-design__title center-flex">
-        <h6>{title}</h6>
+        <h4>{title}</h4>
       </div>
     </Link>
   );
