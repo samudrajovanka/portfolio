@@ -9,7 +9,7 @@ export default function CardExperience({ company, position, type, notShowType, d
       <h2 className="heading-4">{company}</h2>
       <p className="font-medium mt-5">
         {position}
-        {!notShowType && <span className="font-light"> - {type}</span>}
+        {!notShowType && <span className="font-normal"> - {type}</span>}
       </p>
 
       <ul className="card-experience__stacks">

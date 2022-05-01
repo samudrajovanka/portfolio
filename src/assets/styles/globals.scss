@@ -5,6 +5,34 @@
 @import 'mixins/style';
 @import 'components/style';
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/Poppins-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: medium;
+  font-weight: 500;
+  src: local(''), url('/fonts/Poppins-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: bold;
+  font-weight: 700;
+  src: local(''), url('/fonts/Poppins-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Gochi Hand';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/GochiHand-Regular.ttf') format('ttf');
+}
+
 @layer base {
   html {
     @apply box-border font-sans;
