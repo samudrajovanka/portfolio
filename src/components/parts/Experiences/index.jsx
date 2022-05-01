@@ -8,9 +8,7 @@ export default function Experiences({ data, refExperience }) {
   return (
     <section id="experience-section" ref={refExperience}>
       <div className="container" data-aos="fade-up">
-        <Title as="h2" className="mx-auto">
-          Experiences
-        </Title>
+        <Title className="mx-auto">Experiences</Title>
 
         <div className={cn('container mt-5 relative experiences', { 'sm:pb-5 md:pb-0 lg:pb-5': data.length > 1 })}>
           {data.map((item, index) => {

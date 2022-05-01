@@ -8,12 +8,6 @@
       "@icons/*": ["src/assets/icons/*"],
       "@images/*": ["src/assets/images/*"],
       "@lib/*": ["src/lib/*"],
-      "@models/*": ["src/models/*"],
-      "@validations/*": ["src/validations/*"],
-      "@services/*": ["src/services/*"],
-      "@exceptions/*": ["src/exceptions/*"],
-      "@constants/*": ["src/constants/*"],
-      "@contexts/*": ["src/contexts/*"],
       "@data/*": ["src/data/*"]
     }
   },

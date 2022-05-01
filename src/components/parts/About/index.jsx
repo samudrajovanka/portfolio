@@ -15,7 +15,7 @@ export default function About() {
           </div>
         </div>
         <div className="content" data-aos="fade-up">
-          <Title as="h2">Hello</Title>
+          <Title>Hello</Title>
 
           <div className="paragraph">
             <p>
