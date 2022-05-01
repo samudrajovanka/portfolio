@@ -13,9 +13,6 @@ export default function Button({
   href,
   className,
   isExternal,
-  isLoading,
-  disabled,
-  isBlock,
 }) {
   const handleClick = () => {
     if (onClick) {
@@ -30,7 +27,10 @@ export default function Button({
         isExternal={isExternal}
         className={cn(
           `btn btn--${variant}`,
-          { 'btn--animated': isAnimated, 'btn--shadow': isShadow, 'btn--block': isBlock },
+          {
+            'btn--animated': isAnimated,
+            'btn--shadow': isShadow,
+          },
           className
         )}
         onClick={handleClick}
@@ -49,15 +49,12 @@ export default function Button({
         {
           'btn--animated': isAnimated,
           'btn--shadow': isShadow,
-          'cursor-not-allowed opacity-50': disabled,
-          'cursor-wait': isLoading,
         },
         className
       )}
       onClick={handleClick}
-      disabled={disabled || isLoading}
     >
-      {isLoading ? 'Loading...' : children}
+      {children}
     </button>
   );
 }
@@ -71,9 +68,6 @@ Button.defaultProps = {
   href: null,
   className: '',
   isExternal: false,
-  isLoading: false,
-  disabled: false,
-  isBlock: false,
 };
 
 Button.propTypes = {
@@ -86,7 +80,4 @@ Button.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
   isExternal: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  disabled: PropTypes.bool,
-  isBlock: PropTypes.bool,
 };

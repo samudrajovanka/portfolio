@@ -4,10 +4,6 @@
   &__nav {
     @apply flex justify-between items-center gap-3;
 
-    &--end {
-      @apply justify-end;
-    }
-
     a {
       @apply flex items-center;
     }
