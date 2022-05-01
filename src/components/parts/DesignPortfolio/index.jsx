@@ -5,7 +5,7 @@ import Title from '@components/elements/Title';
 export default function DesignPortfolio({ data }) {
   return (
     <section className="container" id="design-portfolio-section">
-      <Title as="h2" className="mx-auto" data-aos="fade-up">
+      <Title className="mx-auto" data-aos="fade-up">
         Design Portfolio
       </Title>
 

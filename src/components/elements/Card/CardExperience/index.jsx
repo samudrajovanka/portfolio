@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 export default function CardExperience({ company, position, type, notShowType, duration, stacks, className }) {
   return (
     <div className={cn('card card--center card-experience', className)}>
-      <h4>{company}</h4>
+      <h2 className="heading-4">{company}</h2>
       <p className="font-medium mt-5">
         {position}
-        {!notShowType && <span className="font-light"> - {type}</span>}
+        {!notShowType && <span className="font-normal"> - {type}</span>}
       </p>
 
       <ul className="card-experience__stacks">
