@@ -10,11 +10,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <meta name="google" content="notranslate" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/favicon.ico" />
+          <meta name="theme-color" content="#234CAD" />
         </Head>
         <body>
           <Main />

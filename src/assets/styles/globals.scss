@@ -9,28 +9,32 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: local(''), url('/fonts/Poppins-Regular.ttf') format('ttf');
+  src: url('/fonts/Poppins-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
   font-style: medium;
   font-weight: 500;
-  src: local(''), url('/fonts/Poppins-Medium.ttf') format('ttf');
+  src: url('/fonts/Poppins-Medium.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
   font-style: bold;
   font-weight: 700;
-  src: local(''), url('/fonts/Poppins-Bold.ttf') format('ttf');
+  src: url('/fonts/Poppins-Bold.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Gochi Hand';
   font-style: normal;
   font-weight: 400;
-  src: local(''), url('/fonts/GochiHand-Regular.ttf') format('ttf');
+  src: url('/fonts/GochiHand-Regular.ttf');
+  font-display: swap;
 }
 
 @layer base {
