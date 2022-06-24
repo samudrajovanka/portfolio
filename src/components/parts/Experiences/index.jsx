@@ -21,12 +21,12 @@ export default function Experiences({ data, refExperience }) {
 
             return (
               <CardExperience
+                key={item._id}
                 company={item.company}
                 position={item.position}
                 type={item.type}
                 duration={fullDuration}
                 stacks={item.stacks}
-                key={item.id}
                 notShowType={item.type === 'Full Time'}
                 className={cn({ 'lg:translate-y-5': index % 2 === 1 })}
               />
@@ -41,11 +41,12 @@ export default function Experiences({ data, refExperience }) {
 Experiences.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
+      _id: PropTypes.string.isRequired,
       company: PropTypes.string.isRequired,
       position: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      startMonth: PropTypes.object.isRequired,
-      endMonth: PropTypes.object.isRequired,
+      startMonth: PropTypes.string.isRequired,
+      endMonth: PropTypes.string.isRequired,
       stacks: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ).isRequired,

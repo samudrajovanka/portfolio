@@ -12,10 +12,10 @@ export default function DesignPortfolio({ data }) {
       <div className="mt-5 grid-column-3">
         {data.map((item, index) => (
           <CardDesign
+            key={item.id}
             url={item.html_url}
             title={item.title}
             imgUrl={item.images.hidpi}
-            key={item.id}
             data-aos="fade-up"
             data-aos-delay={(index % 3) * 100}
           />
