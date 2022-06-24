@@ -24,7 +24,7 @@ export default function SocialMedia({ data, className }) {
   return (
     <div className={cn('social-media', className)}>
       {data.map((item) => (
-        <Link href={item.url} isExternal label={item.label} className="social-media__item" key={item.id}>
+        <Link href={item.url} isExternal label={item.label} className="social-media__item" key={item._id}>
           <Logo Icon={icons[item.icon]} id={`icon-${item.icon}`} />
         </Link>
       ))}
@@ -39,6 +39,7 @@ SocialMedia.defaultProps = {
 SocialMedia.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
+      _id: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       icon: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,

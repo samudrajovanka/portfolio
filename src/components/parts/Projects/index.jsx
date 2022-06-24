@@ -13,10 +13,10 @@ export default function Projects({ data }) {
         <div className="mt-5 grid-column-3 items-start">
           {data.map((item, index) => (
             <CardProject
+              key={item._id}
               name={item.name}
               url={item.url}
               stacks={item.stacks}
-              key={item.id}
               data-aos="flip-left"
               data-aos-delay={(index % 3) * 100}
             />
@@ -30,6 +30,7 @@ export default function Projects({ data }) {
 Projects.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
+      _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       stacks: PropTypes.arrayOf(PropTypes.string).isRequired,

@@ -3,9 +3,8 @@ import Title from '@components/elements/Title';
 import Image from 'next/image';
 
 import profileImg from '@public/images/profile.png';
-import socialMedia from '@data/socialMedia';
 
-export default function About() {
+export default function About({ emailUrl }) {
   return (
     <section className="container min-height-screen center-flex">
       <div id="about-section">
@@ -31,7 +30,7 @@ export default function About() {
             <br />
             <p>
               If you want to know more about me just say &quot;Hi!&quot;{' '}
-              <Link href={socialMedia[3].url} isExternal>
+              <Link href={emailUrl} isExternal>
                 here
               </Link>
               .
